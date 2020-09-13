@@ -1,0 +1,33 @@
+{
+    "version": "2.0",
+    "aggregator": {
+        "batchSize": 1000,
+        "flushTimeout": "00:00:30"
+    },
+    "extensions": {
+        "serviceBus": {
+            "prefetchCount": 5,
+            "messageHandlerOptions": {
+                "maxAutoRenewDuration": "00:45:00",
+                "maxConcurrentCalls": 25
+            }
+        },
+        "cosmosDb": {
+            "connectionMode": "Gateway",
+            "protocol": "Https"
+        }
+    },
+    "logging": {
+        "fileLoggingMode": "debugOnly",
+        "logLevel": {
+            "Host.Results": "Trace",
+            "Function": "Trace",
+            "default": "Error"
+        },
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": false
+            }
+        }
+    }
+}
