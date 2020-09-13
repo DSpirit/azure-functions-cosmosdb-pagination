@@ -8,6 +8,7 @@ C# Azure Function App .NET Core 3.1 - CosmosDB Queries with Pagination
 
 ## Usage
 Example Request:
+
 [GET] http://localhost:7071/api/{database}/{collection}?q={ "QueryText": "<query>", "Parameters": [ { "Name": "@foo", "Value": "bar"}] }&pageSize=5
   
 [GET] http://localhost:7071/api/storage/collection?q={ "QueryText": "SELECT * FROM c", "Parameters": [] }&pageSize=5
